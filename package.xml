@@ -50,6 +50,7 @@
   <!--   <doc_depend>doxygen</doc_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>igvc2019_lidar</build_depend>
+  <build_depend>move_base</build_depend>
   <build_export_depend>igvc2019_lidar</build_export_depend>
   <exec_depend>igvc2019_lidar</exec_depend>
 
