@@ -9,7 +9,8 @@
     <node pkg="tf" type="static_transform_publisher" name="velodyne_frame" args="0 0 0 0 0 0 base_link velodyne 100"/>
     <node pkg="tf" type="static_transform_publisher" name="base_frame" args="0 0 0 0 0 0 odom base_link 100"/>
     <node pkg="tf" type="static_transform_publisher" name="ekf_frame" args="0 0 0 0 0 0 odom odom_combined 100"/>
-
+    <node pkg="tf" type="static_transform_publisher" name="gps_frame" args="0 0 0 0 0 0 odom gps 100"/>
+    
 	<!-- EKF -->
 	<node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf">
     <param name="output_frame" value="odom_combined"/>
@@ -20,17 +21,15 @@
     <param name="vo_used" value="false"/>
     <param name="debug" value="true"/>
     <param name="self_diagnose" value="true"/>
-    <param name="gps_used" value="false"/>
+    <param name="gps_used" value="true"/>
   </node>
 
-	<!-- imu-vn100 launch -->
-		<include file="$(find igvc2019_lidar)/launch/vn_100_cont.launch" />
-
-	<!-- imu covariance matrix -->
-		<node name="imu_covariance" type="imu_covariance.py" pkg="igvc2019_lidar"/>
 
 	<!-- Velodyne VLP16 Puck Launch -->
 		<include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch" />
+        
+    <!-- GPS IMU Launch -->
+        <include file ="$(find igvc2019_navigation)/launch/gps_imu.launch"/>
 
 	<!-- SLAM gmapping -->
 		<node name="slam_gmapping" type="slam_gmapping" pkg="gmapping" output="screen">
