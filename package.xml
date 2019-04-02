@@ -7,7 +7,7 @@
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-  <maintainer email="mailforthedon@gmail.com">Don Vo</maintainer>
+  <maintainer email="don.quy.vo@gmail.com">Don Vo</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->
@@ -50,7 +50,6 @@
   <!--   <doc_depend>doxygen</doc_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>igvc2019_lidar</build_depend>
-  <build_depend>move_base</build_depend>
   <build_export_depend>igvc2019_lidar</build_export_depend>
   <exec_depend>igvc2019_lidar</exec_depend>
 
