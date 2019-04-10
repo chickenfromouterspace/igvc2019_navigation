@@ -35,7 +35,10 @@
 		<node name="slam_gmapping" type="slam_gmapping" pkg="gmapping" output="screen">
 		<param name="scan" value="/scan"/>
 		<param name="linearUpdate" value="0.0"/>
-		<param name="angularUpdate" value="0.0"/>
+		<param name="angularUpdate" value="2"/>
+        <param name= "map_update_interval" value = "2"/>
+        <param name= "minimumScore" value = "50"/>
+        
 	</node>
 
 	<!-- Debugging Utilities -->
