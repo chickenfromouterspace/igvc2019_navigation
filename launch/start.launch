@@ -28,9 +28,7 @@
 		<param name="linearUpdate" value="0.0"/>
 		<param name="angularUpdate" value="0.5"/>
         <param name= "map_update_interval" value = "4"/>
-        <param name= "minimumScore" value = "300"/>
-      
-        
+        <param name= "minimumScore" value = "300"/>  
 	</node>
 
 	<!-- Debugging Utilities -->
